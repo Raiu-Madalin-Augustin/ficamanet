@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { client } from '../lib/client';
-import { Product, FooterBanner, HeroBanner } from '../components';
+import { Product, HeroBanner } from '../components';
 
 const Home = ({ products, bannerData }) => {
   const uniqueCategories = [...new Set(products.map((p) => p.category).filter(Boolean))];
