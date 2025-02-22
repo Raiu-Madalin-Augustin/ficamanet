@@ -42,6 +42,10 @@
       {
         "name": "details",
         "type": "string"
+      },
+      {
+        "name": "category",
+        "type": "string"
       }
     ],
     "name": "product",
