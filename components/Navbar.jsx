@@ -16,9 +16,12 @@ const Navbar = () => {
           </p>
         </div>
         <div className="nav-right">
+        <p className="logo">
+
           <Link href="/despre">
             <a className="nav-link">Despre</a>
           </Link>
+          </p>
         </div>
       </div>
 
