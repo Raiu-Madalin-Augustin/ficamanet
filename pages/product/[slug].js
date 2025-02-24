@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { AiFillStar, AiOutlineStar } from 'react-icons/ai';
 
 import { client, urlFor } from '../../lib/client';
 import { Product } from '../../components';
@@ -50,29 +49,29 @@ const ProductDetails = ({ product, products }) => {
   )
 }
 
-export const getStaticPaths = async () => {
-  const query = `*[_type == "product"] {
-    slug {
-      current
-    }
-  }
-  `;
+// export const getStaticPaths = async () => {
+//   const query = `*[_type == "product"] {
+//     slug {
+//       current
+//     }
+//   }
+//   `;
 
-  const products = await client.fetch(query);
+//   const products = await client.fetch(query);
 
-  const paths = products.map((product) => ({
-    params: { 
-      slug: product.slug.current
-    }
-  }));
+//   const paths = products.map((product) => ({
+//     params: { 
+//       slug: product.slug.current
+//     }
+//   }));
 
-  return {
-    paths,
-    fallback: 'blocking'
-  }
-}
+//   return {
+//     paths,
+//     fallback: 'blocking'
+//   }
+// }
 
-export const getStaticProps = async ({ params: { slug }}) => {
+export const getServerSideProps = async ({ params: { slug }}) => {
   const query = `*[_type == "product" && slug.current == '${slug}'][0]`;
   const productsQuery = '*[_type == "product"]'
   
