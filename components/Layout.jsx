@@ -8,7 +8,8 @@ const Layout = ({ children }) => {
   return (
     <div className="layout">
       <Head>
-        <title>FIC Amanet</title>
+      <link rel="icon" href="/ficamanet-logo.png" type="image/svg+xml" />
+      <meta name="robots" content="index, follow" />
       </Head>
       <header>
         <Navbar />

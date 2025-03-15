@@ -8,13 +8,18 @@ const Navbar = () => {
   return (
     <>
       <div className="navbar-container">
-        <div className="nav-left">
           <p className="logo">
-            <Link href="/">
-              <a>FIC Amanet</a>
+            <Link href="/" >
+              <a> <img
+                  src="./fic.png"
+                  style={{
+                    height:'50px',
+                    borderRadius:'10px'
+                   }}
+                />
+              </a>
             </Link>
           </p>
-        </div>
         <div className="nav-right">
         <p className="logo">
 
@@ -31,7 +36,7 @@ const Navbar = () => {
           display: flex;
           justify-content: space-between;
           align-items: center;
-          padding: 0.5rem 1rem;
+          padding: 0rem 1rem;
           background-color: #fff;
           border-bottom: 2px solid #ddd; /* Underborder */
         }
